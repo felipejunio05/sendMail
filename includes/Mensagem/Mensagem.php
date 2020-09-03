@@ -4,6 +4,7 @@
         private $cPara;
         private $cAssunto;
         private $cMensagem;
+        private $aStatus;
 
         function __construct($cPara, $cAssunto, $cMensagem) {
             $this->cPara = $cPara;
@@ -21,6 +22,14 @@
 
         public function getMsg() {
             return $this->cMensagem;
+        }
+
+        public function setStatus($id, $msg) {
+            $this->aStatus = ['id' => $id, 'msg' => $msg];
+        }
+
+        public function getStatus() {
+            return $this->aStatus;
         }
 
         public function msgValida() {
